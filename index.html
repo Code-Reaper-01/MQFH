@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fav-icon-MQFH.svg" type="image/svg">
+    <title>Molvi Qamar Fish Hatchery - Nurturing Healthy Fish, Sustaining Livelihoods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a69ee;
+            --secondary: #2887db;
+            --accent: #f8b739;
+            --light: #f5f9fa;
+            --dark: #0e2e3a;
+            --text: #333333;
+            --text-light: #666666;
+            --glass: rgba(255, 255, 255, 0.2);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(26, 111, 139, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26, 111, 139, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #38b6ff;
+        }
+
+        .logo-text {
+            color: #18375d;
+            font-size: 1.1rem;
+            align-items: center;
+            display: flex;
+            margin-left: 8px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-btns .btn {
+            padding: 15px 35px;
+        }
+
+        .hero-btns .btn-outline {
+            color: white;
+            border-color: white;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: var(--primary);
+        }
+
+        .team {
+            margin-top: 50px;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid var(--light);
+        }
+
+        .team-member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--light);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(26, 111, 139, 0.3);
+        }
+
+        .step-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            z-index: 0;
+        }
+
+        .process-video {
+            margin-top: 50px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .process-video iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* Fish Types Section */
+        .fish-types {
+            background-color: white;
+        }
+
+        .fish-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .fish-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .fish-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .fish-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .fish-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .fish-card:hover .fish-img img {
+            transform: scale(1.1);
+        }
+
+        .fish-info {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .fish-info h3 {
+            color: var(--primary);
+        }
+
+        .fish-specs {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .fish-spec {
+            background-color: var(--light);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background-color: var(--light);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin: 20px;
+        }
+
+        .client-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .client-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-rating {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .client-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-top: 15px;
+        }
+
+        .client-role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: var(--light);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: #e1f0f5;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 111, 139, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .map-container {
+            margin-top: 50px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-family: inherit;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 15px 30px;
+            background-color: var(--dark);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: #0a212a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Download Brochure Section */
+        .brochure {
+            background-color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .brochure h2 {
+            margin-bottom: 20px;
+        }
+
+        .brochure p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .process-step,
+            .process-step:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .step-number {
+                margin-bottom: 20px;
+            }
+
+            .process-steps::before {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form button {
+                border-radius: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="MQFH.svg" alt="MQFH Logo">
+                <span>Molvi Qamar</span> <span class="logo-text"> Fish Hatchery</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#fish">Fish Breeds</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video autoplay muted loop>
+            <source src="MQFH.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content animate">
+                <h1>Nurturing Healthy Fish, Sustaining Livelihoods</h1>
+                <p>Molvi Qamar Fish Hatchery is committed to providing high-quality, disease-free fish breeds to support
+                    aquaculture and sustainable fishing practices in our region.</p>
+                <div class="hero-btns">
+                    <a href="#about" class="btn">Learn More</a>
+                    <a href="#process" class="btn btn-outline">See Our Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="animate">About Us</h2>
+            <div class="about-content">
+                <div class="about-img animate">
+                    <img src="About-MQFH.png" alt="Our Hatchery">
+                </div>
+                <div class="about-text animate delay-1">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2017, Molvi Qamar Fish Hatchery began as a small family operation with a passion for
+                        sustainable aquaculture. Over the years, we've grown into one of the region's most trusted
+                        suppliers of high-quality fish breeds.</p>
+                    <p>Our mission is to support local farmers and fishing communities by providing healthy,
+                        disease-resistant fish stock while promoting environmentally responsible fish farming practices.
+                    </p>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Sustainability in all our operations</li>
+                        <li>Commitment to quality and fish health</li>
+                        <li>Supporting local farming communities</li>
+                        <li>Continuous innovation in aquaculture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team animate delay-2">
+                <h3>Meet Our Team</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="team-member-img">
+                            <img src="owner.jpg" alt="Molvi Qamar">
+                        </div>
+                        <h4>Molvi Qamar</h4>
+                        <p>Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-img">
+                            <img src="zakriya.jpg" alt="Zakriya Qamar">
+                        </div>
+                        <h4>Zakriya Qamar</h4>
+                        <p>Operations Manager</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-img">
+                            <img src="aman ullah.jpg" alt="Aman Ullah">
+                        </div>
+                        <h4>Aman-Ul-Allah</h4>
+                        <p>Fish Health Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="animate">Our Hatchery Process</h2>
+            <div class="process-steps">
+                <div class="process-step animate">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Breeding Stock Selection</h3>
+                        <p>We carefully select healthy, mature fish with desirable traits to serve as our breeding
+                            stock. Our selection process ensures genetic diversity and disease resistance in our
+                            fingerlings.</p>
+                    </div>
+                </div>
+                <div class="process-step animate delay-1">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Spawning & Egg Collection</h3>
+                        <p>Under controlled conditions, we induce spawning and collect the fertilized eggs. Our
+                            temperature-controlled tanks provide the perfect environment for this critical stage.</p>
+                    </div>
+                </div>
+                <div class="process-step animate delay-2">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Egg Incubation</h3>
+                        <p>The collected eggs are placed in specialized incubation systems where water quality,
+                            temperature, and oxygen levels are meticulously monitored until hatching occurs.</p>
+                    </div>
+                </div>
+                <div class="process-step animate delay-3">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Larval Rearing</h3>
+                        <p>After hatching, the larvae are transferred to rearing tanks where they receive specialized
+                            feed and care during their most vulnerable developmental stage.</p>
+                    </div>
+                </div>
+                <div class="process-step animate delay-4">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Fingerling Production</h3>
+                        <p>As the fish grow into fingerlings, we gradually acclimate them to conditions similar to those
+                            they'll encounter in ponds or natural water bodies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-video animate">
+                <video autoplay muted loop height="660px" width="auto">
+                    <source src="example.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fish Types Section -->
+    <section class="fish-types" id="fish">
+        <div class="container">
+            <h2 class="animate">Types of Fish We Breed</h2>
+            <div class="fish-cards">
+                <div class="fish-card animate">
+                    <div class="fish-img">
+                        <img src="Rahu-Fish.jpg" alt="Rahu Fish">
+                    </div>
+                    <div class="fish-info">
+                        <h3>Rahu Fish</h3>
+                        <div class="fish-specs">
+                            <span class="fish-spec">Freshwater</span>
+                            <span class="fish-spec">Fast-growing</span>
+                            <span class="fish-spec">Popular</span>
+                        </div>
+                        <p>One of the most important aquaculture species in South Asia. Known for its fast growth rate
+                            and excellent taste.</p>
+                        <a href="#contact" class="btn btn-outline">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="fish-card animate delay-1">
+                    <div class="fish-img">
+                        <img src="Grass-Fish.jpg" alt="Tilapia Fish">
+                    </div>
+                    <div class="fish-info">
+                        <h3>Grass Fish</h3>
+                        <div class="fish-specs">
+                            <span class="fish-spec">Profitable</span>
+                            <span class="fish-spec">High Growth Rate</span>
+                            <span class="fish-spec">High Market Demand</span>
+                        </div>
+                        <p>Feeds on grass and plants, reducing input expenses. Popular in Asia; steady consumer base</p>
+                        <a href="#contact" class="btn btn-outline">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="fish-card animate delay-2">
+                    <div class="fish-img">
+                        <img src="China-Fish.jpg" alt="Catla Fish">
+                    </div>
+                    <div class="fish-info">
+                        <h3>China Fish</h3>
+                        <div class="fish-specs">
+                            <span class="fish-spec">Surface feeder</span>
+                            <span class="fish-spec">Large size</span>
+                            <span class="fish-spec">High demand</span>
+                        </div>
+                        <p>A fast-growing major carp species that thrives in polyculture systems. Known for its large
+                            head and upturned mouth.</p>
+                        <a href="#contact" class="btn btn-outline">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="animate">Why Choose Us</h2>
+            <div class="features">
+                <div class="feature animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Disease-Free Breeds</h3>
+                    <p>Our rigorous health screening ensures all our fish stock is free from common diseases, giving
+                        your investment the best start.</p>
+                </div>
+                <div class="feature animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Care</h3>
+                    <p>With over 8 years of experience, our team provides expert care at every stage of the breeding
+                        process.</p>
+                </div>
+                <div class="feature animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We offer prompt and safe delivery of live fish stock to your location with specialized transport.
+                    </p>
+                </div>
+                <div class="feature animate delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Guarantee</h3>
+                    <p>99.9% survival rate with our 7-day health guarantee on all fingerlings delivered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item animate">
+                    <h3>8+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item animate delay-1">
+                    <h3>10M+</h3>
+                    <p>Fish Delivered</p>
+                </div>
+                <div class="stat-item animate delay-2">
+                    <h3>1000+</h3>
+                    <p>Happy Farmers</p>
+                </div>
+                <div class="stat-item animate delay-3">
+                    <h3>99.9%</h3>
+                    <p>Health Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="animate">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial animate">
+                    <div class="client-img">
+                        <img src="Sher-Pacha.jpg" alt="Sher Pacha">
+                    </div>
+                    <p>"Molvi Qamar Hatchery provided me with the healthiest fingerlings I've ever worked with. The
+                        survival rate was exceptional, and their technical support was invaluable for my first fish
+                        farming venture."</p>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="client-name">Sher Pacha</div>
+                    <div class="client-role">Fish Farmer, Afganistan</div>
+                </div>
+                <div class="testimonial animate delay-1">
+                    <div class="client-img">
+                        <img src="Umar.jpg" alt="Muhammad Umar">
+                    </div>
+                    <p>"As a entrepreneur in aquaculture, I appreciate Molvi Qamar's commitment to supporting
+                        small farmers. Their fingerlings have consistently performed well in my ponds, and their advice
+                        on feeding has improved my yields."</p>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="client-name">Muhammad Umar</div>
+                    <div class="client-role">Aquaculture Entrepreneur, Punjab</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="animate">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item animate">
+                    <img src="G!.jpg"
+                        alt="Hatchery Facility">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item animate delay-1">
+                    <img src="G2.jpg"
+                        alt="Fish Breeding">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item animate delay-2">
+                    <img src="G3.jpg"
+                        alt="Fish Tanks">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item animate delay-3">
+                    <img src="G4.jpg"
+                        alt="Fish Harvest">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="animate">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item animate">
+                    <div class="faq-question">
+                        <span>What is the best season to buy fish fingerlings?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The ideal time depends on the fish species and your region's climate. Generally, spring
+                            (February-April) is best for most species as water temperatures become favorable for growth.
+                            We can advise you on the optimal timing based on your specific location and fish species.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-1">
+                    <div class="faq-question">
+                        <span>What is your minimum order quantity?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our minimum order is 1,000 fingerlings for most species. However, we encourage first-time
+                            farmers to start with at least 5,000 fingerlings to achieve better economies of scale in
+                            their operations.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-2">
+                    <div class="faq-question">
+                        <span>How do you transport live fish?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use specialized oxygenated transport bags for small quantities and live fish transport
+                            tanks for larger orders. Our delivery vehicles are equipped to maintain optimal water
+                            conditions during transit to ensure high survival rates.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-3">
+                    <div class="faq-question">
+                        <span>Do you provide technical support after purchase?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer free basic technical support for all our customers. Our experts can advise on
+                            pond preparation, feeding schedules, water quality management, and disease prevention. We
+                            want your fish farming venture to succeed!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="animate">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info animate">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Hazrat Kailian wala, Punjab, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p>03456568365</p>
+                            <p>03468101060</p>
+                            <p>03440490700</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p>molviqamarhatchery@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 24/7</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate delay-1">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option value="inquiry">General Inquiry</option>
+                                <option value="order">Fish Order</option>
+                                <option value="support">Technical Support</option>
+                                <option value="visit">Hatchery Visit</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+          
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="animate">Stay Updated</h2>
+            <p class="animate delay-1">Subscribe to our newsletter for seasonal availability, farming tips, and special
+                offers.</p>
+            <form class="newsletter-form animate delay-2">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col animate">
+                    <h3>Molvi Qamar Fish Hatchery</h3>
+                    <p>Nurturing Healthy Fish, Sustaining Livelihoods through sustainable aquaculture practices since
+                        2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col animate delay-1">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#fish">Fish Breeds</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col animate delay-2">
+                    <h3>Fish Breeds</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Rahu (Labeo rohita)</a></li>
+                        <li><a href="#">Tilapia (Oreochromis niloticus)</a></li>
+                        <li><a href="#">Catla (Catla catla)</a></li>
+                        <li><a href="#">Grass Carp</a></li>
+                        <li><a href="#">Silver Carp</a></li>
+                        <li><a href="#">Mrigal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col animate delay-3">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Hazrat Kailian wala, Punjab</li>
+                        <li><i class="fas fa-phone-alt"></i> +92 346 8101060</li>
+                        <li><i class="fas fa-envelope"></i> info@molviqamarhatchery.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2017-2025 Molvi Qamar Fish Hatchery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923468101060" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+
+                // Close other open items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on Scroll
+        const animateElements = document.querySelectorAll('.animate');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>
