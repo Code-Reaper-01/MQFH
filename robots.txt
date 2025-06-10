@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mqfs.vercel.app/sitemap.xml
